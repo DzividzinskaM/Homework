@@ -3,11 +3,13 @@
 }
 
 html {
-  font-size: 0.52vw;
+  font-size: 6px;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
 }
 
 .header {
@@ -55,14 +57,14 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 44%;
+  width: 88%;
   transform: translate(-50%, 20%);
 }
 
 .intro__subtitle {
-  font-size: 3.6rem;
+  font-size: 3.6em;
   color: #8492af;
-  margin-top: 2.2rem;
+  margin-top: 0.76em;
 }
 
 .clearfix {
@@ -79,32 +81,31 @@ body {
   color: #fff;
 }
 
-
-
 .col2,
 .col3 {
   float: left;
-  padding: 0 3rem;
+  padding: 10rem 3rem;
 }
 
 .col3 {
-  width: 33.333%;
+  width: 100%;
 }
+
 .col2 {
-  width: 50%;
+  width: 100%;
 }
 
 
 .features {
   width: 100%;
-  position: absolute;
+  height: 33.3vh;
+  position: relative;
   margin-top: 26rem;
 }
 
 .features__container {
   margin: 0 auto;
-  width: 80%;
-  height: 63rem;
+  width: 100%;
 }
 /* 
 .features {
@@ -134,12 +135,11 @@ body {
 .item-features {
   text-align: center;
   position: relative;
-  height: 50vh;
+
 }
 
 .item-features__icon {
- /*  position: relative;
-  top: 60px; */
+  
 }
 
 .item-features__img{
@@ -173,16 +173,18 @@ body {
   border: 1px solid grey;
 }
 
-.need
-{
+.need {
   width: 100%;
-  position: absolute;
-  top: 173rem;
+  position: relative;
+  height: 67.6vh;
+
+  top: 22rem;
 }
 
 .need__container{
-  width: 80%;
   margin: 0 auto;
+
+  width: 100%;
 }
 
 .item-need{
@@ -204,9 +206,8 @@ body {
 }
 
 .item-need__image{
-  width: 50vw;
+  width: 100%;
   height: 57vh;
-  /* height: 6.25rem; */
   background-image: url("./images/need.png");
   background-position: left;
   background-size: cover;
@@ -214,7 +215,36 @@ body {
 }
 
 
+@media (min-width: 720px) {
+  html {
+    font-size: 7.5px;
+  }
+  .intro__preview {
+    width: 66%;
+    transform: translate(-50%, 20%);
+  }
+  .col2 {
+    width: 50%;
+  }
+  .item-need__image {
+    width: 57vw;
+  }
 
+}
 
-/* btn: #5584ff
-subtitle: #8492af; */
+@media (min-width: 1080px) {
+  html {
+    font-size: 0.52vw;
+  }
+  .intro__preview {
+    width: 44%;
+  }
+  .col3 {
+    padding: 0 3rem;   
+    width: 33.333%;
+  }
+  .need__container {
+    width: 80%; 
+  }
+
+}
